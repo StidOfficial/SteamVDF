@@ -8,6 +8,18 @@ public class VDFBaseElement {
 	private Map<String, VDFElement> MapParent = new HashMap<>();
 	private Map<String, String> MapKey = new HashMap<>();
 	
+	public void addKey(String Name, boolean Value) {
+		this.addKey(Name, (Value) ? "1" : "0");
+	}
+	
+	public void addKey(String Name, int Value) {
+		this.addKey(Name, Value);
+	}
+	
+	public void addKey(String Name, long Value) {
+		this.addKey(Name, Value);
+	}
+	
 	public void addKey(String Name, String Value) {
 		this.MapKey.put(Name, Value);
 	}
