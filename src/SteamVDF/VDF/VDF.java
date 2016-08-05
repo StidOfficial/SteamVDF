@@ -71,6 +71,10 @@ public class VDF extends VDFBaseElement {
 		return str.replace("\"", "");
 	}
 	
+	public void Save(String file) throws IOException {
+		this.Save(new File(file));
+	}
+	
 	public void Save(File file) throws IOException {
 		BufferedWriter BufferWriter = new BufferedWriter(new FileWriter(file));
 		BufferWriter.write(this.toString());
