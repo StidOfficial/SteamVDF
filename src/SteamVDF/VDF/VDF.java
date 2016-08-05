@@ -14,6 +14,10 @@ public class VDF extends VDFBaseElement {
 		super();
 	}
 	
+	public VDF(String file) throws IOException {
+		this(new File(file));
+	}
+	
 	public VDF(File file) throws IOException {
 		this(fileToLine(file));
 	}
