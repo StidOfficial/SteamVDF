@@ -13,11 +13,11 @@ public class VDFBaseElement {
 	}
 	
 	public void addKey(String Name, int Value) {
-		this.addKey(Name, Value);
+		this.addKey(Name, String.valueOf(Value));
 	}
 	
 	public void addKey(String Name, long Value) {
-		this.addKey(Name, Value);
+		this.addKey(Name, String.valueOf(Value));
 	}
 	
 	public void addKey(String Name, String Value) {
