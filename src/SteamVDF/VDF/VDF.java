@@ -10,6 +10,8 @@ import java.util.ArrayList;
 
 public class VDF extends VDFBaseElement {
 	
+	private static File VDFFile;
+	
 	public VDF() {
 		super();
 	}
@@ -54,6 +56,8 @@ public class VDF extends VDFBaseElement {
 	}
 	
 	private static String[] fileToLine(File file) throws IOException {
+		VDFFile = file;
+		
 		ArrayList<String> BufferLine = new ArrayList<>();
 		BufferedReader BufferReader = new BufferedReader(new FileReader(file));
 		String LineRead = null;
@@ -69,6 +73,14 @@ public class VDF extends VDFBaseElement {
 	
 	private static String removeQuote(String str) {
 		return str.replace("\"", "");
+	}
+	
+	public File getFile() {
+		return VDFFile;
+	}
+	
+	public void Save() throws IOException {
+		this.Save(VDFFile);
 	}
 	
 	public void Save(String file) throws IOException {
