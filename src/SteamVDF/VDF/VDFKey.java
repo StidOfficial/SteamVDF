@@ -8,6 +8,7 @@ public class VDFKey {
 		this.Value = Value;
 	}
 	
+	@Override
 	public String toString() {
 		return this.Value;
 	}
